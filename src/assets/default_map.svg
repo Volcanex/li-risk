@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="9.655 31.827 451.576 282.697" width="451.576px" height="282.697px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+<svg viewBox="9.655 31.827 451.576 282.697" width="451.576px" height="282.697px" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style bx:fonts="Courier Prime">@import url(https://fonts.googleapis.com/css2?family=Courier+Prime%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&amp;display=swap);</style>
+    <style>@import url(https://fonts.googleapis.com/css2?family=Courier+Prime%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&amp;display=swap);</style>
   </defs>
   <g style="" id="Routes" transform="matrix(1, 0, 0, 1, 0, 3.992308)">
     <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-miterlimit: 1;" d="M 21.78 69.56 L 9.655 69.51 L 21.78 69.56 Z" id="Alaska-Kamchatka"/>
