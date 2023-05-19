@@ -1,3 +1,5 @@
+Just run npm start from this directory if you're running locally. (For me)
+
 <div align="center">  
     <img height="50" src="./src/assets/codux.svg">  
     <h1>React App template for Codux</h1>
