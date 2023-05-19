@@ -1,4 +1,10 @@
-If running locally (why) From the server directory run:
+Docker is hosted here!
+http://localhost:5001/
+
+Locally hosted at
+http://127.0.0.1:5000/
+
+If running locally from the server directory run:
 
 source venv/bin/activate
 
@@ -12,7 +18,7 @@ TO UPDATE THE REQUIREMENTS FILE:
 source venv/bin/activate
 pip freeze > requirements.txt
 
-WHEN RUNNING WITH DOCKER, YOU WILL NEED TO UPDATE THE REQUIREMENTS FILE IF INSTALLING NEW PACKAGES IN THE VENV! 
+WHEN RUNNING WITH DOCKER, YOU WILL NEED TO UPDATE THE REQUIREMENTS FILE IF INSTALLING NEW PACKAGES IN THE VENV! MAYBE?
 
 Here's a solution I can't be bothered to implement just now because it doesn't even seem to full fix the problem:
 
