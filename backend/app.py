@@ -1,33 +1,39 @@
-from flask import Flask,  request, jsonify
-
-try:
-    from flask_pymongo import PyMongo
-except ImportError:
-    import os
-    os.system("pip install Flask-PyMongo")
-    from flask_pymongo import PyMongo
-
+from flask import Flask, request
+from flask_pymongo import PyMongo
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase" # Replace with your MongoDB connection string
-mongo = PyMongo()
-mongo.init_app(app)
+app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"  # Replace with your MongoDB connection string
+mongo = PyMongo(app)
+
 
 @app.route('/')
 def hello_world():
     return 'Flask server running!'
 
+
+@app.route('/create-database', methods=['POST'])
+def create_database():
+    db_list = mongo.db.list_collection_names()
+    if "svg_collection" in db_list:
+        print("Database already exists")
+    else:
+        mongo.db.create_collection("svg_collection")
+        print("Database created")
+
 @app.route('/upload-svg', methods=['POST'])
 def upload_svg():
-    svg_file = request.files['file']  # Assumes the file is uploaded with the key 'file'
-    svg_data = svg_file.read()  # Read the SVG file data
-    mongo.db.svg_collection.insert_one({'svg_data': svg_data})  # Store the SVG data in MongoDB
-    return 'SVG file uploaded successfully'
-
-@app.route('/get-svg/<svg_id>', methods=['GET'])
-def get_svg(svg_id):
-    svg = mongo.db.svg_collection.find_one({'_id': svg_id})
-    if svg:
-        return jsonify(svg['svg_data'])
+    if 'file' in request.files:
+        svg_file = request.files['file']
+        svg_data = svg_file.read()
+        mongo.db.svg_collection.insert_one({'svg_data': svg_data})
+        return 'SVG file uploaded successfully'
+    elif 'svg_data' in request.json:
+        svg_data = request.json['svg_data']
+        mongo.db.svg_collection.insert_one({'svg_data': svg_data})
+        return 'SVG data uploaded successfully'
     else:
-        return 'SVG not found', 404
+        return 'No SVG file or data found', 400
+
+
+if __name__ == '__main__':
+    app.run()
