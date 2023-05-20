@@ -1,10 +1,12 @@
+Why is giving me every single package I've ever installed this is so weird ! I'm so bad at these things, I'm just cleaning it out manually. 
+
 Docker is hosted here!
 http://localhost:5001/
 
 Locally hosted at
 http://127.0.0.1:5000/
 
-If running locally from the server directory run:
+If running locally; from the backend directory run:
 
 source venv/bin/activate
 
