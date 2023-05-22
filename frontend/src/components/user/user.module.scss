@@ -1,12 +1,27 @@
 //Why doesn't this styling work god I'm so stupid
 
 .root {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  
-  .column {
-    padding: 10px;
-  }
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-auto-flow: row;
+  position: relative;
+}
+
+.column {
+  padding: 5px;
+  text-align: center;
+}
+.ProfileImg {
+  width: 128px;
+  height: 128px;
+  padding: 0px;
+}
+.row {
+  text-align: start;
+  align-self: center;
+}
+.smallButton {
+  width: 80%;
+  height: 40px;
+}

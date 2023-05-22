@@ -12,13 +12,28 @@ export interface UserProps {
 export const User = ({ className }: UserProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <div className="row">
-                <div className="column">
-                    <img src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg" />
-                </div>
-                <div className="column">
+            <div className={classNames('row', styles.row)}>
+                <div className={classNames('column', styles.column)}></div>
+                <div className={classNames('column', styles.column)}>
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                        className={styles.ProfileImg}
+                    />
                     <h2>USERNAME</h2>
-                    <p>Test</p>
+                </div>
+            </div>
+            <div className={classNames('row', styles.row)}>
+                <div className={classNames('column', styles.column)}>
+                    <button className={styles.smallButton}>Button</button>
+                </div>
+                <div className={classNames('column', styles.column)}>
+                    <button className={styles.smallButton}>Button</button>
+                </div>
+                <div className={classNames('column', styles.column)}>
+                    <button className={styles.smallButton}>Button</button>
+                </div>
+                <div className={classNames('column', styles.column)}>
+                    <button className={styles.smallButton}>Button</button>
                 </div>
             </div>
         </div>
