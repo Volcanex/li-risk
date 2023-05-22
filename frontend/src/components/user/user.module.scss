@@ -1,0 +1,12 @@
+//Why doesn't this styling work god I'm so stupid
+
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .column {
+    padding: 10px;
+  }
+  
