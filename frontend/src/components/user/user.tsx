@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from './user.module.scss';
 import classNames from 'classnames';
 
@@ -5,37 +6,76 @@ export interface UserProps {
     className?: string;
 }
 
-/**
- * This component was created using Codux's Default new component template.
- * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
- */
 export const User = ({ className }: UserProps) => {
+    const [isActive, setActive] = useState<Record<string, boolean>>({});
+
+    const handleClick = (buttonName: string) => {
+        setActive({ [buttonName]: true });
+    };
+
     return (
         <div className={classNames(styles.root, className)}>
-            <div className={classNames('row', styles.row)}>
-                <div className={classNames('column', styles.column)}></div>
-                <div className={classNames('column', styles.column)}>
+            <nav className={classNames(styles.navbar, styles.navbar)}>
+                <div className={classNames(styles.profileSection)}>
                     <img
                         src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                        className={styles.ProfileImg}
+                        className={styles.profileImg}
                     />
-                    <h2>USERNAME</h2>
+                    <h2 className={styles.username}>Volcanex</h2>
+                    <button
+                        className={classNames(
+                            styles.navButton,
+                            isActive['Profile'] && styles.active,
+                            isActive['Profile'] && styles.clicked,
+                        )}
+                        onClick={() => handleClick('Profile')}
+                    >
+                        +
+                    </button>
                 </div>
-            </div>
-            <div className={classNames('row', styles.row)}>
-                <div className={classNames('column', styles.column)}>
-                    <button className={styles.smallButton}>Button</button>
+                <div className={classNames(styles.navButtons)}>
+                    <button
+                        className={classNames(
+                            styles.navButton,
+                            isActive['Profile'] && styles.active,
+                            isActive['Profile'] && styles.clicked,
+                        )}
+                        onClick={() => handleClick('Profile')}
+                    >
+                        Profile
+                    </button>
+                    <button
+                        className={classNames(
+                            styles.navButton,
+                            isActive['Play'] && styles.active,
+                            isActive['Play'] && styles.clicked,
+                        )}
+                        onClick={() => handleClick('Play')}
+                    >
+                        Play
+                    </button>
+                    <button
+                        className={classNames(
+                            styles.navButton,
+                            isActive['Messages'] && styles.active,
+                            isActive['Messages'] && styles.clicked,
+                        )}
+                        onClick={() => handleClick('Messages')}
+                    >
+                        Messages
+                    </button>
+                    <button
+                        className={classNames(
+                            styles.navButton,
+                            isActive['About us'] && styles.active,
+                            isActive['About us'] && styles.clicked,
+                        )}
+                        onClick={() => handleClick('About us')}
+                    >
+                        About us
+                    </button>
                 </div>
-                <div className={classNames('column', styles.column)}>
-                    <button className={styles.smallButton}>Button</button>
-                </div>
-                <div className={classNames('column', styles.column)}>
-                    <button className={styles.smallButton}>Button</button>
-                </div>
-                <div className={classNames('column', styles.column)}>
-                    <button className={styles.smallButton}>Button</button>
-                </div>
-            </div>
+            </nav>
         </div>
     );
 };
