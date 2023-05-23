@@ -1,20 +1,20 @@
-// src/components/navButton/navButton.tsx
+// src/components/button/button.tsx
 import React from 'react';
 import classNames from 'classnames';
-import styles from './navButton.module.scss';
+import styles from './button.module.scss';
 
-interface NavButtonProps {
+interface buttonProps {
     isActive: boolean;
     handleClick: () => void;
     label: string;
     isUsernameButton?: boolean;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ isActive, handleClick, label, isUsernameButton }) => {
+const button: React.FC<buttonProps> = ({ isActive, handleClick, label, isUsernameButton }) => {
     return (
         <button
             className={classNames(
-                styles.navButton,
+                styles.button,
                 isActive && styles.active,
                 isActive && styles.clicked,
                 isUsernameButton && styles.UsernameButton
@@ -26,4 +26,4 @@ const NavButton: React.FC<NavButtonProps> = ({ isActive, handleClick, label, isU
     );
 };
 
-export default NavButton;
+export default button;

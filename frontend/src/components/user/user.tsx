@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './user.module.scss';
 import classNames from 'classnames';
-import NavButton from '../navButton/navButton';
+import Button from '../button/button';
 
 export interface UserProps {
     className?: string;
@@ -24,7 +24,7 @@ export const User = ({ className }: UserProps) => {
                         className={styles.profileImg}
                     />
                     <h2 className={styles.username}>Volcanex</h2>
-                    <NavButton
+                    <Button
                         isActive={isActive['Profile']}
                         handleClick={() => handleClick('Profile')}
                         label="+"
@@ -32,22 +32,22 @@ export const User = ({ className }: UserProps) => {
                     />
                 </div>
                 <div className={classNames(styles.navButtons)}>
-                    <NavButton
+                    <Button
                         isActive={isActive['Profile']}
                         handleClick={() => handleClick('Profile')}
                         label="Profile"
                     />
-                    <NavButton
+                    <Button
                         isActive={isActive['Play']}
                         handleClick={() => handleClick('Play')}
                         label="Play"
                     />
-                    <NavButton
+                    <Button
                         isActive={isActive['Messages']}
                         handleClick={() => handleClick('Messages')}
                         label="Messages"
                     />
-                    <NavButton
+                    <Button
                         isActive={isActive['About us']}
                         handleClick={() => handleClick('About us')}
                         label="About us"
