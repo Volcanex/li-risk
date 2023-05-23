@@ -27,6 +27,7 @@ export const User = ({ className }: UserProps) => {
                             styles.navButton,
                             isActive['Profile'] && styles.active,
                             isActive['Profile'] && styles.clicked,
+                            styles.UsernameButton
                         )}
                         onClick={() => handleClick('Profile')}
                     >
@@ -38,7 +39,7 @@ export const User = ({ className }: UserProps) => {
                         className={classNames(
                             styles.navButton,
                             isActive['Profile'] && styles.active,
-                            isActive['Profile'] && styles.clicked,
+                            isActive['Profile'] && styles.clicked
                         )}
                         onClick={() => handleClick('Profile')}
                     >
@@ -48,7 +49,7 @@ export const User = ({ className }: UserProps) => {
                         className={classNames(
                             styles.navButton,
                             isActive['Play'] && styles.active,
-                            isActive['Play'] && styles.clicked,
+                            isActive['Play'] && styles.clicked
                         )}
                         onClick={() => handleClick('Play')}
                     >
@@ -58,7 +59,7 @@ export const User = ({ className }: UserProps) => {
                         className={classNames(
                             styles.navButton,
                             isActive['Messages'] && styles.active,
-                            isActive['Messages'] && styles.clicked,
+                            isActive['Messages'] && styles.clicked
                         )}
                         onClick={() => handleClick('Messages')}
                     >
@@ -68,7 +69,7 @@ export const User = ({ className }: UserProps) => {
                         className={classNames(
                             styles.navButton,
                             isActive['About us'] && styles.active,
-                            isActive['About us'] && styles.clicked,
+                            isActive['About us'] && styles.clicked
                         )}
                         onClick={() => handleClick('About us')}
                     >

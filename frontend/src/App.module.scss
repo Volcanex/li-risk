@@ -16,12 +16,20 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: stretch; /* updated this */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  justify-items: start;
+  align-content: start;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  align-items: start;
 }
 
 .App-link {

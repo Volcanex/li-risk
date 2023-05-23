@@ -6,7 +6,7 @@ function App() {
     return (
         <div className={styles.App}>
             <header className={styles['App-header']}>
-                <User />
+                <User className={styles.navbar} />
                 <p>Risk test implementation.</p>
                 <Map />
             </header>
