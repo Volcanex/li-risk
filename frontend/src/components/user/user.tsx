@@ -1,6 +1,8 @@
+// src/components/user/user.tsx
 import React, { useState } from 'react';
 import styles from './user.module.scss';
 import classNames from 'classnames';
+import NavButton from '../navButton/navButton';
 
 export interface UserProps {
     className?: string;
@@ -22,59 +24,34 @@ export const User = ({ className }: UserProps) => {
                         className={styles.profileImg}
                     />
                     <h2 className={styles.username}>Volcanex</h2>
-                    <button
-                        className={classNames(
-                            styles.navButton,
-                            isActive['Profile'] && styles.active,
-                            isActive['Profile'] && styles.clicked,
-                            styles.UsernameButton
-                        )}
-                        onClick={() => handleClick('Profile')}
-                    >
-                        +
-                    </button>
+                    <NavButton
+                        isActive={isActive['Profile']}
+                        handleClick={() => handleClick('Profile')}
+                        label="+"
+                        isUsernameButton
+                    />
                 </div>
                 <div className={classNames(styles.navButtons)}>
-                    <button
-                        className={classNames(
-                            styles.navButton,
-                            isActive['Profile'] && styles.active,
-                            isActive['Profile'] && styles.clicked
-                        )}
-                        onClick={() => handleClick('Profile')}
-                    >
-                        Profile
-                    </button>
-                    <button
-                        className={classNames(
-                            styles.navButton,
-                            isActive['Play'] && styles.active,
-                            isActive['Play'] && styles.clicked
-                        )}
-                        onClick={() => handleClick('Play')}
-                    >
-                        Play
-                    </button>
-                    <button
-                        className={classNames(
-                            styles.navButton,
-                            isActive['Messages'] && styles.active,
-                            isActive['Messages'] && styles.clicked
-                        )}
-                        onClick={() => handleClick('Messages')}
-                    >
-                        Messages
-                    </button>
-                    <button
-                        className={classNames(
-                            styles.navButton,
-                            isActive['About us'] && styles.active,
-                            isActive['About us'] && styles.clicked
-                        )}
-                        onClick={() => handleClick('About us')}
-                    >
-                        About us
-                    </button>
+                    <NavButton
+                        isActive={isActive['Profile']}
+                        handleClick={() => handleClick('Profile')}
+                        label="Profile"
+                    />
+                    <NavButton
+                        isActive={isActive['Play']}
+                        handleClick={() => handleClick('Play')}
+                        label="Play"
+                    />
+                    <NavButton
+                        isActive={isActive['Messages']}
+                        handleClick={() => handleClick('Messages')}
+                        label="Messages"
+                    />
+                    <NavButton
+                        isActive={isActive['About us']}
+                        handleClick={() => handleClick('About us')}
+                        label="About us"
+                    />
                 </div>
             </nav>
         </div>
