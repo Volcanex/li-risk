@@ -1,4 +1,3 @@
-// src/components/link-button/linkButton.tsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
