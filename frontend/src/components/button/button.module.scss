@@ -12,6 +12,7 @@
     font-family: $button-font-family;
     transition: $button-transition;
     margin: 5px;
+    text-decoration: none !important;
   
     &:hover {
       background-color: $tertiary-color;
