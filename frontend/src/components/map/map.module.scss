@@ -5,6 +5,19 @@
 .mapBackground {
   background-color: white;
   border: 10px solid white;
-  border-radius: 25px;
+  border-radius: 0px;
   padding: 10px;
+}
+
+.homeContainer {
+  /* Custom styles for the Home component container */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: content-box;
+  /* Add any other styles as needed */
+
+  /* Additional styles to override any conflicting properties */
+  width: auto;
 }

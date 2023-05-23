@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: grid;
 }
 
 .App-logo {
@@ -15,21 +16,23 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: block;
+  min-height: 0vh;
+  display: flex;
   flex-direction: column;
   align-items: stretch; /* updated this */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  justify-items: start;
+  justify-items: center;
   align-content: start;
+  height: 100%;
 }
 
 .navbar {
   position: sticky;
   top: 0;
   align-items: start;
+  justify-items: stretch;
 }
 
 .App-link {
@@ -43,4 +46,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Home {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
